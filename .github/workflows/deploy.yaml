@@ -54,13 +54,7 @@ jobs:
           cd ./terraform
           terraform apply -auto-approve tfplan
 
-      # Optional: capture the S3 bucket name as output
-      - name: Get S3 Bucket Name
-        id: get_bucket
-        run: |
-          cd ./terraform
-          # Replace "my_bucket" with your actual output name
-          echo "bucket_name=$(terraform output -raw my_bucket)" >> $GITHUB_OUTPUT
+
 
   frontend:
     runs-on: ubuntu-latest
