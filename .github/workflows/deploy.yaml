@@ -1,8 +1,9 @@
 name: Destroy Terraform
 
 on:
-  workflow_dispatch:   # 👈 run manually from GitHub Actions tab
-
+  push:
+    branches:
+      - "main"   
 env:
   AWS_REGION: "us-east-2"
 
